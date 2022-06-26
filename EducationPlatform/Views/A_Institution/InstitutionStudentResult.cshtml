@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "InstitutionStudentResult";
+}
+
+<h2>Institution Student Result</h2>
+
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Student Id</th>
+            <th scope="col">Course Name</th>
+            <th scope="col">Marks</th>
+            <th scope="col">Date</th>
+            <th scope="col">Return/Not Return</th>
+
+          
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+
+            <tr>
+                <th scope="row">@p.StudentId</th>
+                <td>@p.CourseName</td>
+                
+                <td>@p.Mark</td>
+                <td>@p.Date</td>
+                <td>
+                    @p.BackAnswer
+                    
+                    <br />
+
+                                <a class="btn btn-primary" href="~/A_Institution/InstitutionStudentReturnResult/@p.Id" role="button">RETURN RESULT</a>
+                                <a class="btn btn-warning" href="~/A_Institution/InstitutionStudentNotReturnResult/@p.Id" role="button">NOT RETURN RESULT</a>
+
+                            </td>
+
+
+
+              
+              
+               
+            </tr>
+        }
+
+
+    </tbody>
+
+</table>
+
+

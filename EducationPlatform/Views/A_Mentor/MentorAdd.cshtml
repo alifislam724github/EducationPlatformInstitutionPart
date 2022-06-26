@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "MentorAdd";
+}
+
+<h2>Add Mentor</h2>
+<form action="" method="post">
+
+    <h4>Name</h4>  <input type="text" value="@(Model!= null ? Model.Name:"")" name="Name" class="form-control" />
+
+    <h4>Address</h4>  <input type="text" value="@(Model!= null ? Model.Address:"")" name="Address" class="form-control" />
+
+    <h4>Email</h4>  <input type="email" value="@(Model != null ? Model.Email:" ")" name="Email" class=" form-control" />
+    <h4>Phone</h4>  <input type="text" value="@(Model != null ? Model.Phone:" ")" name="Phone" class=" form-control" />
+    <h4>Password</h4>  <input type="password" name="Password" class=" form-control" />
+    <h4>Gender</h4>  <input type="text" value="@(Model != null ? Model.Gender:"")" name="Gender" class=" form-control" />
+    <br />
+    <button type="submit">Submit</button>
+</form>
+

@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "InstitutionInformation";
+}
+
+<h2>InstitutionInformation</h2>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Password</th>
+            <th scope="col">Website Link</th>
+            <th scope="col">Status</th>
+            <th scope="col">Photo</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+
+            <tr>
+                <th scope="row">@Model.Id</th>
+                <td>@Model.Name</td>
+                <td>@Model.Address</td>
+                <td>@Model.Email</td>
+                <td>@Model.Phone</td>
+                <td>@Model.Password</td>
+                <td>@Model.WebsiteLink</td>
+                <td>@Model.IsValid</td>
+                <td>@Model.Photo</td>
+                <td>
+
+                    
+
+                    <a class="btn btn-primary" href="~/A_Institution/InstitutionDelete/@Model.Id" role="button">Delete</a>
+                    <a class="btn btn-primary" href="~/A_Institution/InstitutionUpdate/@Model.Id" role="button">Update Details</a>
+                    <a href="~/A_Institution/InstitutionStudentResult/@Model.Id" class="btn btn-primary">See Result</a>
+                </td>
+            </tr>
+        
+
+
+    </tbody>
+
+</table>
+
+

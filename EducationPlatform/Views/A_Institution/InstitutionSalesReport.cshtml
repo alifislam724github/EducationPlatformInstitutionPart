@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "InstitutionSalesReport";
+}
+
+<h2>Institution Sales Report</h2>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Total Sold Courses</th>
+            <th scope="col">Total Selling</th>
+           
+            <th scope="col">Institution Earning</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            
+            <td>@ViewBag.varsityName</td>
+            <td>@ViewBag.totalSellingCourse</td>
+            <td>@ViewBag.sellingAmount BDT</td>
+            
+            <td>@ViewBag.varsityEarning BDT</td>
+           
+        </tr>
+       
+    </tbody>
+</table>
+
+
+    

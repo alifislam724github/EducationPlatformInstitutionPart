@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "InstitutionStudentList";
+}
+
+<h2>InstitutionStudentList</h2>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">CourseId</th>
+            <th scope="col">StudentId</th>
+            <th scope="col">InstituionId</th>
+            <th scope="col">BkashTransactionNumber</th>
+            <th scope="col">Date</th>
+            <th scope="col">CoursePrice</th>
+            <th scope="col">CreditedAmount</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+
+            <tr>
+                <th scope="row">@p.Id</th>
+                <td>@p.CourseId</td>
+                <td>@p.StudentId</td>
+                <td>@p.InstitutionId</td>
+                <td>@p.BkashTransactionNumber</td>
+                <td>@p.Date</td>
+                <td>@p.CoursePrice</td>
+                <td>@p.CreditedAmount</td>
+               
+                <td>
+
+                    <a class="btn btn-primary" href="~/A_Institution/InstitutionStudentCertificate/@p.StudentId" role="button">Approve certificate</a>
+
+                   
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+
+</table>
+
+

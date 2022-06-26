@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "InstitutionStudentCertificate";
+}
+
+<h2>InstitutionStudentCertificate</h2>
+
+<table class="table table-sm">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Applier Id</th>
+            <th scope="col">Course Id</th>
+            <th scope="col">Status</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <th scope="row">@i.Id</th>
+               
+               
+                <td>@i.ApplierId</td>
+                <td>@i.CourseId</td>
+                <td>@i.Status</td>
+                <td>
+                    @{ if (i.Status == "Applied by Student")
+                        {
+
+                            <a href="~/A_Institution/InstitutionStudentCertificateRecommendation/
+                               @i.Id" class="btn btn-primary">Recommend Certificate</a>
+
+                        }
+                        else
+                        {
+
+                            <a href="~/A_Institution/InstitutionStudentCertificateRecommendation/
+                               @i.Id" class="btn btn-primary disabled">Recommend Certificate</a>
+
+                            }
+                        }
+
+                    </td>
+                
+            </tr>
+
+        }
+        
+
+        </tbody>
+</table>
+

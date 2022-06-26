@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "InstitutionOfferedCourse";
+}
+
+<h2>Institution Offered Course</h2>
+<form action="" method="post">
+
+    <h4>Name</h4>  <input type="text" value="@(Model!= null ? Model.Name:"")" name="Name" class="form-control" />
+
+    <h4>Details</h4>  <input type="text" value="@(Model!= null ? Model.Details:"")" name="Details" class="form-control" />
+
+    <h4>Price</h4>  <input type="text" value="@(Model != null ? Model.Price:"")" name="Price" class=" form-control" />
+    <h4>Duration</h4>  <input type="text" value="@(Model != null ? Model.Duration:"")" name="Duration" class=" form-control" />
+    <h4>Photo</h4>  <input type="text" value="@(Model != null ? Model.Photo:"")" name="Photo" class=" form-control" />
+    
+    <br />
+    <button type="submit">Submit</button>
+</form>
+
