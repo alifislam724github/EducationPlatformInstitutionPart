@@ -2,49 +2,62 @@
 @{
     ViewBag.Title = "InstitutionStudentList";
 }
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title></title>
+</head>
+<body>
+    <header>
+        <br />
+        <h2>InstitutionStudentList</h2>
 
-<h2>InstitutionStudentList</h2>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">CourseId</th>
+                    <th scope="col">StudentId</th>
+                    <th scope="col">InstituionId</th>
+                    <th scope="col">BkashTransactionNumber</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">CoursePrice</th>
+                    <th scope="col">CreditedAmount</th>
 
-<table class="table">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">Id</th>
-            <th scope="col">CourseId</th>
-            <th scope="col">StudentId</th>
-            <th scope="col">InstituionId</th>
-            <th scope="col">BkashTransactionNumber</th>
-            <th scope="col">Date</th>
-            <th scope="col">CoursePrice</th>
-            <th scope="col">CreditedAmount</th>
-            
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var p in Model)
-        {
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var p in Model)
+                {
 
-            <tr>
-                <th scope="row">@p.Id</th>
-                <td>@p.CourseId</td>
-                <td>@p.StudentId</td>
-                <td>@p.InstitutionId</td>
-                <td>@p.BkashTransactionNumber</td>
-                <td>@p.Date</td>
-                <td>@p.CoursePrice</td>
-                <td>@p.CreditedAmount</td>
-               
-                <td>
+                    <tr>
+                        <th scope="row">@p.Id</th>
+                        <td>@p.CourseId</td>
+                        <td>@p.StudentId</td>
+                        <td>@p.InstitutionId</td>
+                        <td>@p.BkashTransactionNumber</td>
+                        <td>@p.Date</td>
+                        <td>@p.CoursePrice</td>
+                        <td>@p.CreditedAmount</td>
 
-                    <a class="btn btn-primary" href="~/A_Institution/InstitutionStudentCertificate/@p.StudentId" role="button">Approve certificate</a>
+                        <td>
 
-                   
-                </td>
-            </tr>
-        }
+                            <a class="btn btn-secondary" href="~/A_Institution/InstitutionStudentCertificate/@p.StudentId" role="button">Approve certificate</a>
 
 
-    </tbody>
+                        </td>
+                    </tr>
+                }
 
-</table>
+
+            </tbody>
+
+        </table>
+        </header>
+    </body>
+</html>
 
 

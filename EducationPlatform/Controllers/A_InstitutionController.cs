@@ -103,6 +103,7 @@ namespace EducationPlatform.Controllers
             return View();
         }
 
+        [InstitutionLogged]
         public ActionResult InstitutionInformationDownload(int id)
         {
             //Create a new PDF document.
