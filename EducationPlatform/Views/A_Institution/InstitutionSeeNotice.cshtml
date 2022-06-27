@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "InstitutionSeeNotice";
+}
+
+<h2>Institution See Notice</h2>
+    
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>Notice Id</th>
+            <th scope="col">Date</th>
+            <th scope="col">Details</th>
+       
+        </tr>
+    </thead>
+    <tbody>
+
+
+
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.Id</td>
+                <td>@i.Date</td>
+                <td>@i.Details</td>
+
+                <td>
+                    <a href="~/A_Institution/InstitutionUpdateNotice/@i.Id" class="btn btn-primary">Update Notice</a>
+                </td>
+
+            </tr>
+
+
+        }
+
+       
+    </tbody>
+
+</table>
+

@@ -88,6 +88,7 @@
     <Property Name="MentorId" Type="Int32" />
     <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Mentor" Relationship="Self.FK_Courses_Mentors" FromRole="Courses" ToRole="Mentors" />
+    <Property Name="InstitutionId" Type="Int32" />
   </EntityType>
   <EntityType Name="Institution">
     <Key>

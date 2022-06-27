@@ -22,6 +22,7 @@ namespace EducationPlatform.Models
         public Nullable<System.DateTime> Date { get; set; }
         public Nullable<int> MentorId { get; set; }
         public string Photo { get; set; }
+        public Nullable<int> InstitutionId { get; set; }
     
         public virtual Mentor Mentor { get; set; }
     }

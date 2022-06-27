@@ -81,6 +81,7 @@
     <Property Name="Date" Type="date" />
     <Property Name="MentorId" Type="int" />
     <Property Name="Photo" Type="varchar" MaxLength="50" />
+    <Property Name="InstitutionId" Type="int" />
   </EntityType>
   <EntityType Name="Institutions">
     <Key>

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EducationPlatformModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="EducationPlatformModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Admins">
           <Key>
             <PropertyRef Name="Id" />
@@ -86,6 +86,7 @@
           <Property Name="Date" Type="date" />
           <Property Name="MentorId" Type="int" />
           <Property Name="Photo" Type="varchar" MaxLength="50" />
+          <Property Name="InstitutionId" Type="int" />
         </EntityType>
         <EntityType Name="Institutions">
           <Key>
@@ -413,8 +414,7 @@
             <End Role="ValidStudents" EntitySet="ValidStudents" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EducationPlatformModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -506,6 +506,7 @@
           <Property Name="MentorId" Type="Int32" />
           <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Mentor" Relationship="Self.FK_Courses_Mentors" FromRole="Courses" ToRole="Mentors" />
+          <Property Name="InstitutionId" Type="Int32" />
         </EntityType>
         <EntityType Name="Institution">
           <Key>
@@ -934,6 +935,7 @@
           <EntitySetMapping Name="Courses">
             <EntityTypeMapping TypeName="EducationPlatformModel.Cours">
               <MappingFragment StoreEntitySet="Courses">
+                <ScalarProperty Name="InstitutionId" ColumnName="InstitutionId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Details" ColumnName="Details" />

@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "InstitutionUpdateOfferedCourse";
+}
+
+<h2>Institution Update Offered Course</h2>
+<form action="" method="post">
+
+
+    <input type="text" name="Name" value="@Model.Name" class="form-control" placeholder="Namw" />
+    <input type="text" name="Details" value="@Model.Details" class="form-control" placeholder="DETAILS" />
+    <input type="text" name="Price" value="@Model.Price" class="form-control" placeholder="Price" />
+    <input type="text" name="Duration" value="@Model.Duration" class="form-control" placeholder="Duration" />
+    <input type="date" name="Date" value="@Model.Date" class="form-control" placeholder="Date" />
+    <input type="text" name="MentorId" value="@Model.MentorId" class="form-control" placeholder="Mentor Id" />
+    <input type="text" name="Photo" value="@Model.Photo" class="form-control" placeholder="Photo" />
+    <input type="text" name="InstitutionId" value="@Model.InstitutionId" class="form-control" placeholder="Institution Id" />
+
+    <button type="submit" class="btn btn-success">Submit</button>
+
+</form>
+
