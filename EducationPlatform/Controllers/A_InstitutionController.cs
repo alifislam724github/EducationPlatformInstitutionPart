@@ -467,6 +467,13 @@ namespace EducationPlatform.Controllers
             return View();
         }
 
+        [InstitutionLogged]
+        public ActionResult InstitutionLogOut()
+        {
+            Session.Clear();
+            return RedirectToAction("LogIn");
+        }
+
     }
 }
    
